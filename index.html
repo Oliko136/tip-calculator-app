@@ -5,32 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script defer type="module" src="./src/main.js"></script>
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
 
   <main>
     <h1 class="visually-hidden">Tip calculator</h1>
-    <section class="frame">
+    <div class="frame">
       <form class="form" id="form">
         <div class="form-field">
           <label for="bill">Bill</label>
           <input type="number" id="bill" name="bill">
+          <img src="./src/images/icon-dollar.svg" alt="">
         </div>
-        <div class="form-field">
-          <label for="tip">Select Tip %</label>
-          <input type="number" id="tip" name="custom">
-        </div>
+        <fieldset class="form-field">
+          <legend>Select Tip %</legend>
+          <div>
+            <label for="5">5%</label>
+            <input type="radio" name="tip" value="5" id="5">
+          </div>
+          <div>
+            <label for="10">10%</label>
+            <input type="radio" name="tip" value="10" id="10">
+          </div>
+          <div>
+            <label for="15">15%</label>
+            <input type="radio" name="tip" value="15" id="15">
+          </div>
+          <div>
+            <label for="25">25%</label>
+            <input type="radio" name="tip" value="25" id="25">
+          </div>
+          <div>
+            <label for="50">50%</label>
+            <input type="radio" name="tip" value="50" id="50">
+          </div>
+          <div>
+            <label for="custom">Custom</label>
+            <input type="number" name="tip" id="custom">
+          </div>
+        </fieldset>
         <div class="form-field">
           <label for="people">Number of people</label>
-          <input type="radio" name="people" id="people" value="5">
-          <input type="radio" name="people" id="people" value="10">
-          <input type="radio" name="people" id="people" value="15">
-          <input type="radio" name="people" id="people" value="25">
-          <input type="radio" name="people" id="people" value="50">
           <input type="number" id="people" name="people">
+          <img src="./src/images/icon-person.svg" alt="">
         </div>
       </form>
       <div class="results">
@@ -44,8 +63,9 @@
         </div>
         <button type="button" class="btn btn-reset" id="reset">Reset</button>
       </div>
-    </section>
+    </div>
   </main>
-  
+
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
