@@ -11,25 +11,41 @@
 </head>
 <body>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-
+  <main>
+    <h1 class="visually-hidden">Tip calculator</h1>
+    <section class="frame">
+      <form class="form" id="form">
+        <div class="form-field">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill" name="bill">
+        </div>
+        <div class="form-field">
+          <label for="tip">Select Tip %</label>
+          <input type="number" id="tip" name="custom">
+        </div>
+        <div class="form-field">
+          <label for="people">Number of people</label>
+          <input type="radio" name="people" id="people" value="5">
+          <input type="radio" name="people" id="people" value="10">
+          <input type="radio" name="people" id="people" value="15">
+          <input type="radio" name="people" id="people" value="25">
+          <input type="radio" name="people" id="people" value="50">
+          <input type="number" id="people" name="people">
+        </div>
+      </form>
+      <div class="results">
+        <div class="results-item">
+          <p class="results-name"><span class="accent-text">Tip Amount</span> / person</p>
+          <p class="results-amount" id="tip-result">$0.00</p>
+        </div>
+        <div class="results-item">
+          <p class="results-name"><span class="accent-text">Total</span> / person</p>
+          <p class="results-amount" id="total-result">$0.00</p>
+        </div>
+        <button type="button" class="btn btn-reset" id="reset">Reset</button>
+      </div>
+    </section>
+  </main>
+  
 </body>
 </html>
