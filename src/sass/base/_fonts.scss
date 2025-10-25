@@ -1,0 +1,10 @@
+@use "../utils/variables" as var;
+
+@font-face {
+    font-family: var.$main-font;
+    src: url("../../assets/fonts/SpaceMono-Bold.ttf") format("truetype"),
+        url("../../assets/fonts/SpaceMono-Bold.ttf") format("truetype");
+    font-weight: var.$font-weight;
+    font-style: normal;
+    font-display: swap;
+}
