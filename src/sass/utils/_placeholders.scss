@@ -1,0 +1,49 @@
+@use 'functions' as fn;
+@use 'mixins' as mx;
+@use 'variables' as var;
+
+%preset-1 {
+    font-size: fn.get-fs('xxl');
+    line-height: 4.4375rem;
+    letter-spacing: -0.0625rem;
+}
+
+%preset-2 {
+    font-size: fn.get-fs('xl');
+    line-height: 2.9375rem;
+    letter-spacing: -0.04188rem;
+}
+
+%preset-3 {
+    font-size: fn.get-fs('lg');
+    line-height: 2.25rem;
+}
+
+%preset-4 {
+    font-size: fn.get-fs('md');
+    line-height: 1.875rem;
+}
+
+%preset-5 {
+    font-size: fn.get-fs('sm');
+    line-height: 1.5rem;
+}
+
+%preset-6 {
+    font-size: fn.get-fs('xs');
+    line-height: 1.1875rem;
+}
+
+%card {
+    padding: var.$sp-400 var.$sp-300;
+    border-radius: 25px;
+    background-color: fn.get-color('white');
+
+    @include mx.mq('md') {
+        padding: var.$sp-600 var.$sp-1000;
+    }
+
+    @include mx.mq('lg') {
+        padding: var.$sp-400;
+    }
+}

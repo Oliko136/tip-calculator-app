@@ -5,3 +5,7 @@
 @function get-color($key) {
     @return map.get(var.$colors, $key);
 }
+
+@function get-fs($key) {
+    @return map.get(var.$font-sizes, $key);
+}
