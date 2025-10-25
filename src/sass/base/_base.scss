@@ -6,6 +6,12 @@
 body {
     @extend %preset-6;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
     font-family: var.$main-font, sans-serif;
     color: fn.get-color("grey-400");
     background-color: fn.get-color("grey-200");

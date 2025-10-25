@@ -1,0 +1,24 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.card {
+    @extend %card;
+
+    display: flex;
+    gap: fn.get-sp('sp-400');
+
+    @include mx.mq('md') {
+        gap: fn.get-sp('sp-500');
+    }
+
+    @include mx.mq('lg', 'max') {
+        flex-direction: column;
+    }
+
+    @include mx.mq('lg') {
+        flex-direction: row;
+        gap: fn.get-sp('sp-600');
+    }
+}

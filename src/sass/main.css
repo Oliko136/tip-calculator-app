@@ -129,7 +129,27 @@ body {
   line-height: 1.1875rem;
 }
 
+.card {
+  padding: 2rem 1.5rem;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    padding: 2rem 5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   font-family: "Space Mono", sans-serif;
   color: #7F9D9F;
   background-color: #C5E4E7;
@@ -152,4 +172,25 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.card {
+  display: flex;
+  gap: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    gap: 2.5rem;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .card {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card {
+    flex-direction: row;
+    gap: 3rem;
+  }
 }/*# sourceMappingURL=main.css.map */
