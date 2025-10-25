@@ -1,0 +1,51 @@
+$breakpoints: (
+    "sm": 375px,
+    "md": 768px,
+    "lg": 1200px,
+    "xl": 1440px,
+    "xxl": 1920px,
+);
+
+$colors: (
+    "white": #FFFFFF,
+    "grey-600": #3D6666,
+    "grey-550": #547878,
+    "grey-500": #5E7A7D,
+    "grey-400": #7F9D9F,
+    "grey-300": #9EBBBD,
+    "grey-200": #C5E4E7,
+    "grey-50": #F3F9FA,
+    "green-900": #00474B,
+    "green-800": #085C61,
+    "green-750": #0D686D,
+    "green-400": #26C2AE,
+    "green-200": #9FE8DF,
+    "orange": #E17052,
+    "transparent": transparent,
+    "current": currentColor,
+);
+
+$spacers: (
+    "sp-100": 0.5rem,
+    "sp-200": 1rem,
+    "sp-300": 1.5rem,
+    "sp-400": 2rem,
+    "sp-600": 3rem,
+    "sp-1000": 5rem,
+    "sp-1200": 6rem,
+    "sp-1500": 7.5rem,
+    "sp-1600": 8rem,
+);
+
+$main-font: "Space Mono";
+
+$font-weight: 700;
+
+$font-sizes: (
+    "xs": 0.8125rem,
+    "sm": 1rem,
+    "md": 1.25rem,
+    "lg": 1.5rem,
+    "xl": 2rem,
+    "xxl": 3rem,
+);
