@@ -9,3 +9,7 @@
 @function get-fs($key) {
     @return map.get(var.$font-sizes, $key);
 }
+
+@function get-sp($key) {
+    @return map.get(var.$spacers, $key);
+}

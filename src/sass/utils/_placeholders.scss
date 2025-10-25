@@ -35,15 +35,15 @@
 }
 
 %card {
-    padding: var.$sp-400 var.$sp-300;
+    padding: fn.get-sp('sp-400') fn.get-sp('sp-300');
     border-radius: 25px;
     background-color: fn.get-color('white');
 
     @include mx.mq('md') {
-        padding: var.$sp-600 var.$sp-1000;
+        padding: fn.get-sp('sp-400') fn.get-sp('sp-1000');
     }
 
     @include mx.mq('lg') {
-        padding: var.$sp-400;
+        padding: fn.get-sp('sp-400');
     }
 }
