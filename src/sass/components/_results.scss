@@ -1,0 +1,57 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: fn.get-sp('sp-400');
+
+    padding: fn.get-sp('sp-300');
+    border-radius: 15px;
+
+    background-color: fn.get-color('green-900');
+
+    @include mx.mq('md') {
+        gap: fn.get-sp('sp-200');
+    }
+
+    @include mx.mq('lg') {
+        gap: fn.get-sp('sp-1600');
+    }
+}
+
+.results-content {
+    display: flex;
+    flex-direction: column;
+    gap: fn.get-sp('sp-300');
+
+    @include mx.mq('md') {
+        gap: fn.get-sp('sp-100');
+    }
+
+    @include mx.mq('md') {
+        gap: fn.get-sp('sp-300');
+    }
+}
+
+.results-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.results-name {
+    span {
+        @extend %preset-5;
+
+        color: fn.get-color('white');
+    }
+}
+
+.results-amount {
+    @extend %preset-1;
+
+    color: fn.get-color('green-400');
+}

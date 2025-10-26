@@ -9,8 +9,12 @@
     display: flex;
     gap: fn.get-sp('sp-400');
 
+    min-width: 375px;
+
     @include mx.mq('md') {
         gap: fn.get-sp('sp-500');
+
+        min-width: 608px;
     }
 
     @include mx.mq('lg', 'max') {
@@ -20,5 +24,7 @@
     @include mx.mq('lg') {
         flex-direction: row;
         gap: fn.get-sp('sp-600');
+
+        min-width: 920px;
     }
 }

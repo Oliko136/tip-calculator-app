@@ -124,6 +124,17 @@ meter {
   display: none;
 }
 
+.results-amount {
+  font-size: 3rem;
+  line-height: 4.4375rem;
+  letter-spacing: -0.0625rem;
+}
+
+.results-name span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 body {
   font-size: 0.8125rem;
   line-height: 1.1875rem;
@@ -177,10 +188,12 @@ button {
 .card {
   display: flex;
   gap: 2rem;
+  min-width: 375px;
 }
 @media only screen and (min-width: 768px) {
   .card {
     gap: 2.5rem;
+    min-width: 608px;
   }
 }
 @media only screen and (max-width: 1199.98px) {
@@ -192,5 +205,55 @@ button {
   .card {
     flex-direction: row;
     gap: 3rem;
+    min-width: 920px;
   }
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: #00474B;
+}
+@media only screen and (min-width: 768px) {
+  .results {
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .results {
+    gap: 8rem;
+  }
+}
+
+.results-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .results-content {
+    gap: 0.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .results-content {
+    gap: 1.5rem;
+  }
+}
+
+.results-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.results-name span {
+  color: #FFFFFF;
+}
+
+.results-amount {
+  color: #26C2AE;
 }/*# sourceMappingURL=main.css.map */
