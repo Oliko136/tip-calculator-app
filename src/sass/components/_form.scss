@@ -64,10 +64,16 @@
 
 .form-input {
     @extend %number-input;
+
+    @include mx.ease(outline);
         
     text-align: right;
 
     &::placeholder {
         color: rgba(fn.get-color('green-900'), 0.35);
+    }
+
+    &:focus-visible {
+        @extend %focus-outline;
     }
 }

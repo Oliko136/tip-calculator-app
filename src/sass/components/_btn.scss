@@ -4,20 +4,22 @@
 @use "../utils/mixins" as mx;
 
 .btn {
+    @include mx.ease(background-color, color, outline);
+    
     border-radius: 5px;
 
     text-align: center;
     text-transform: uppercase;
-
-    transition-property: background-color color;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
 
     &:hover,
     &:focus,
     &:active {
         background-color: fn.get-color('green-200');
     }
+
+    &:focus-visible {
+        @extend %focus-outline;
+    };
 }
 
 .btn-reset {

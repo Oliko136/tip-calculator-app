@@ -59,3 +59,9 @@
     color: fn.get-color('green-900');
     background-color: fn.get-color('grey-50');
 }
+
+%focus-outline {
+    outline: 2px solid;
+    outline-color: fn.get-color('grey-500');
+    outline-offset: 2px;
+}

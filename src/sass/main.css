@@ -175,6 +175,12 @@ body {
   background-color: #F3F9FA;
 }
 
+.btn:focus-visible, .radio-input:focus-visible, .radio-custom:focus-visible, .form-input:focus-visible {
+  outline: 2px solid;
+  outline-color: #5E7A7D;
+  outline-offset: 2px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -295,12 +301,14 @@ input[type=number] {
 }
 
 .form-input {
+  transition-property: outline;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
   text-align: right;
 }
 .form-input::placeholder {
   color: rgba(0, 71, 75, 0.35);
 }
-
 .radio {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -317,6 +325,9 @@ input[type=number] {
 }
 
 .radio-input {
+  transition-property: background-color, color, outline;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
   display: block;
   height: 48px;
   padding: 0.38rem 1.07rem;
@@ -324,9 +335,6 @@ input[type=number] {
   text-align: center;
   background-color: #00474B;
   cursor: pointer;
-  transition-property: background-color color;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
 }
 .radio-input:checked {
   background-color: #26C2AE;
@@ -347,6 +355,9 @@ input[type=number] {
 }
 
 .radio-custom {
+  transition-property: outline;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
   text-align: center;
   color: #00474B;
   background-color: #F3F9FA;
@@ -413,17 +424,16 @@ input[type=number] {
 }
 
 .btn {
+  transition-property: background-color, color, outline;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
   border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
-  transition-property: background-color color;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
 }
 .btn:hover, .btn:focus, .btn:active {
   background-color: #9FE8DF;
 }
-
 .btn-reset {
   padding: 0.56rem 2.41rem;
   width: 100%;

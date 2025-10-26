@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:list';
 
 @use "variables" as var;
 @use "functions" as fn;
@@ -25,5 +26,13 @@
 
     } @else {
         @warn "The variable $bp is not defined";
+    }
+}
+
+@mixin ease($properties...) {
+    @if list.length($properties)>0 {
+        transition-property: $properties;
+        transition-duration: 300ms;
+        transition-timing-function: ease;
     }
 }

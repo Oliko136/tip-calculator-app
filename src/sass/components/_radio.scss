@@ -18,6 +18,8 @@
 }
 
 .radio-input {
+    @include mx.ease(background-color, color, outline);
+
     display: block;
     height: 48px;
     padding: 0.38rem 1.07rem;
@@ -28,10 +30,6 @@
     background-color: fn.get-color('green-900');
     cursor: pointer;
 
-    transition-property: background-color color;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
-
     &:checked {
         background-color: fn.get-color('green-400');
     }
@@ -40,6 +38,10 @@
     &:focus,
     &:active {
         background-color: fn.get-color('green-200');
+    }
+
+    &:focus-visible {
+        @extend %focus-outline;
     }
 
     & + label {
@@ -62,6 +64,8 @@
 
 .radio-custom {
     @extend %number-input;
+
+    @include mx.ease(outline);
     
     text-align: center;
 
@@ -72,6 +76,10 @@
         @extend %preset-3;
 
         color: fn.get-color('grey-550');
+    }
+
+    &:focus-visible {
+        @extend %focus-outline;
     }
 
     @include mx.mq('lg') {
