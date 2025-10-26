@@ -168,12 +168,19 @@ body {
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2.55rem;
   height: 100vh;
   font-family: "Space Mono", sans-serif;
   color: #7F9D9F;
   background-color: #C5E4E7;
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    gap: 5.49rem;
+  }
 }
 
 button {

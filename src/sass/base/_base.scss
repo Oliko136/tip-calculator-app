@@ -7,14 +7,20 @@ body {
     @extend %preset-6;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2.55rem;
 
     height: 100vh;
 
     font-family: var.$main-font, sans-serif;
     color: fn.get-color("grey-400");
     background-color: fn.get-color("grey-200");
+
+    @include mx.mq('lg') {
+        gap: 5.49rem;
+    }
 }
 
 button {

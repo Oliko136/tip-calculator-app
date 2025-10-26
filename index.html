@@ -9,7 +9,9 @@
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-
+  <header>
+    <img src="./src/assets/images/logo.svg" alt="Splitter app logo" class="logo">
+  </header>
   <main>
     <h1 class="visually-hidden">Tip calculator</h1>
     <div class="card">
@@ -17,7 +19,7 @@
         <div class="form-field">
           <label for="bill" class="form-label">Bill</label>
           <div class="form-thumb">
-            <input type="number" id="bill" name="bill" placeholder="0" class="form-input">
+            <input type="number" min="0" id="bill" name="bill" placeholder="0" class="form-input">
             <img src="./src/assets/images/icon-dollar.svg" alt="" class="icon icon-dollar">
           </div>
         </div>
@@ -45,13 +47,13 @@
           </div>
           <div>
             <label for="custom">Custom</label>
-            <input type="number" name="tip" id="custom">
+            <input type="number" min="0" name="tip" id="custom">
           </div>
         </fieldset>
         <div class="form-field">
           <label for="people" class="form-label">Number of people</label>
           <div class="form-thumb">
-            <input type="number" id="people" name="people" placeholder="0" class="form-input">
+            <input type="number" min="0" id="people" name="people" placeholder="0" class="form-input">
             <img src="./src/assets/images/icon-person.svg" alt="" class="icon icon-person">
           </div>
         </div>
