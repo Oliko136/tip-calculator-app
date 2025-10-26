@@ -130,7 +130,7 @@ meter {
   letter-spacing: -0.0625rem;
 }
 
-.form-input {
+.radio-input + label, .radio-custom::placeholder, .radio-custom, .form-input {
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
@@ -164,6 +164,15 @@ body {
   .card {
     padding: 2rem;
   }
+}
+
+.radio-custom, .form-input {
+  padding: 0.38rem 1.07rem;
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  color: #00474B;
+  background-color: #F3F9FA;
 }
 
 body {
@@ -237,18 +246,18 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  min-width: 327px;
+  width: 327px;
 }
 @media only screen and (min-width: 768px) {
   .form {
     gap: 1.5rem;
-    min-width: 457px;
+    width: 457px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .form {
     gap: 2.5rem;
-    min-width: 379px;
+    width: 379px;
   }
 }
 
@@ -260,6 +269,10 @@ input[type=number] {
 
 .form-label {
   color: #5E7A7D;
+}
+
+.form-legend {
+  margin-bottom: 0.5rem;
 }
 
 .form-thumb {
@@ -282,22 +295,76 @@ input[type=number] {
 }
 
 .form-input {
-  width: 100%;
-  padding: 0.37rem 1.06rem;
-  border-radius: 5px;
   text-align: right;
-  color: #00474B;
-  background-color: #F3F9FA;
 }
 .form-input::placeholder {
   color: rgba(0, 71, 75, 0.35);
+}
+
+.radio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .radio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.radio-field {
+  position: relative;
+}
+
+.radio-input {
+  display: block;
+  height: 48px;
+  padding: 0.38rem 1.07rem;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #00474B;
+  cursor: pointer;
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.radio-input:checked {
+  background-color: #26C2AE;
+}
+.radio-input:hover, .radio-input:focus, .radio-input:active {
+  background-color: #9FE8DF;
+}
+.radio-input + label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  pointer-events: none;
+}
+.radio-input:checked + label {
+  color: #00474B;
+}
+
+.radio-custom {
+  text-align: center;
+  color: #00474B;
+  background-color: #F3F9FA;
+}
+.radio-custom::placeholder {
+  color: #547878;
+}
+@media only screen and (min-width: 1200px) {
+  .radio-custom {
+    padding: 0.38rem 0.75rem;
+  }
 }
 
 .results {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  min-width: 327px;
+  width: 327px;
   padding: 1.5rem;
   border-radius: 15px;
   background-color: #00474B;
@@ -305,13 +372,13 @@ input[type=number] {
 @media only screen and (min-width: 768px) {
   .results {
     gap: 1rem;
-    min-width: 457px;
+    width: 457px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .results {
     gap: 8rem;
-    min-width: 413px;
+    width: 413px;
   }
 }
 

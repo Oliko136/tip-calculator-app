@@ -1,0 +1,80 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.radio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fn.get-sp('sp-200');
+
+    @include mx.mq('md') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.radio-field {
+    position: relative;
+}
+
+.radio-input {
+    display: block;
+    height: 48px;
+    padding: 0.38rem 1.07rem;
+    border-radius: 5px;
+
+    text-align: center;
+
+    background-color: fn.get-color('green-900');
+    cursor: pointer;
+
+    transition-property: background-color color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+
+    &:checked {
+        background-color: fn.get-color('green-400');
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: fn.get-color('green-200');
+    }
+
+    & + label {
+        @extend %preset-3;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: fn.get-color('white');
+
+        pointer-events: none;
+    }
+    
+    &:checked + label {
+        color: fn.get-color('green-900');
+    }
+}
+
+.radio-custom {
+    @extend %number-input;
+    
+    text-align: center;
+
+    color: fn.get-color('green-900');
+    background-color: fn.get-color('grey-50');
+
+    &::placeholder {
+        @extend %preset-3;
+
+        color: fn.get-color('grey-550');
+    }
+
+    @include mx.mq('lg') {
+        padding: 0.38rem 0.75rem;
+    }
+}

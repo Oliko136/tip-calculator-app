@@ -47,3 +47,15 @@
         padding: fn.get-sp('sp-400');
     }
 }
+
+%number-input {
+    @extend %preset-3;
+
+    padding: 0.38rem 1.07rem;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+
+    color: fn.get-color('green-900');
+    background-color: fn.get-color('grey-50');
+}

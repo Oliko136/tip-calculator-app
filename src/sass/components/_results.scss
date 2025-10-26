@@ -8,7 +8,7 @@
     flex-direction: column;
     gap: fn.get-sp('sp-400');
 
-    min-width: 327px;
+    width: 327px;
     padding: fn.get-sp('sp-300');
     border-radius: 15px;
 
@@ -17,13 +17,13 @@
     @include mx.mq('md') {
         gap: fn.get-sp('sp-200');
 
-        min-width: 457px;
+        width: 457px;
     }
 
     @include mx.mq('lg') {
         gap: fn.get-sp('sp-1600');
 
-        min-width: 413px;
+        width: 413px;
     }
 }
 

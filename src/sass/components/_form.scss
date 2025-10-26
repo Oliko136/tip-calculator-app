@@ -8,18 +8,18 @@
     flex-direction: column;
     gap: fn.get-sp('sp-400');
 
-    min-width: 327px;
+    width: 327px;
 
     @include mx.mq('md') {
         gap: fn.get-sp('sp-300');
 
-        min-width: 457px;
+        width: 457px;
     }
 
     @include mx.mq('lg') {
         gap: fn.get-sp('sp-500');
 
-        min-width: 379px;
+        width: 379px;
     }
 }
 
@@ -33,6 +33,10 @@
     @extend %preset-5;
 
     color: fn.get-color('grey-500');
+}
+
+.form-legend {
+    margin-bottom: fn.get-sp('sp-100');
 }
 
 .form-thumb {
@@ -59,16 +63,9 @@
 }
 
 .form-input {
-    @extend %preset-3;
-
-    width: 100%;
-    padding: 0.37rem 1.06rem;
-    border-radius: 5px;
+    @extend %number-input;
         
     text-align: right;
-
-    color: fn.get-color('green-900');
-    background-color: fn.get-color('grey-50');
 
     &::placeholder {
         color: rgba(fn.get-color('green-900'), 0.35);
