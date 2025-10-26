@@ -14,11 +14,6 @@ export default defineConfig({
         }
     },
     css: {
-        postcss: {
-            plugins: [
-                require('cssnano'),
-                require('autoprefixer'),
-            ],
-        },
+        postcss: "./postcss.config.js",
     },
 })
