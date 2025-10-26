@@ -215,12 +215,10 @@ input[type=number] {
 .card {
   display: flex;
   gap: 2rem;
-  min-width: 375px;
 }
 @media only screen and (min-width: 768px) {
   .card {
     gap: 2.5rem;
-    min-width: 608px;
   }
 }
 @media only screen and (max-width: 1199.98px) {
@@ -232,7 +230,6 @@ input[type=number] {
   .card {
     flex-direction: row;
     gap: 3rem;
-    min-width: 920px;
   }
 }
 
@@ -240,15 +237,18 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 327px;
 }
 @media only screen and (min-width: 768px) {
   .form {
     gap: 1.5rem;
+    min-width: 457px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .form {
     gap: 2.5rem;
+    min-width: 379px;
   }
 }
 
@@ -297,6 +297,7 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 327px;
   padding: 1.5rem;
   border-radius: 15px;
   background-color: #00474B;
@@ -304,11 +305,13 @@ input[type=number] {
 @media only screen and (min-width: 768px) {
   .results {
     gap: 1rem;
+    min-width: 457px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .results {
     gap: 8rem;
+    min-width: 413px;
   }
 }
 

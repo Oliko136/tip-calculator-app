@@ -8,12 +8,18 @@
     flex-direction: column;
     gap: fn.get-sp('sp-400');
 
+    min-width: 327px;
+
     @include mx.mq('md') {
         gap: fn.get-sp('sp-300');
+
+        min-width: 457px;
     }
 
     @include mx.mq('lg') {
         gap: fn.get-sp('sp-500');
+
+        min-width: 379px;
     }
 }
 
