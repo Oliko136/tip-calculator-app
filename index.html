@@ -15,12 +15,14 @@
     <div class="card">
       <form class="form" id="form">
         <div class="form-field">
-          <label for="bill">Bill</label>
-          <input type="number" id="bill" name="bill">
-          <img src="./src/assets/images/icon-dollar.svg" alt="">
+          <label for="bill" class="form-label">Bill</label>
+          <div class="form-thumb">
+            <input type="number" id="bill" name="bill" placeholder="0" class="form-input">
+            <img src="./src/assets/images/icon-dollar.svg" alt="" class="icon icon-dollar">
+          </div>
         </div>
         <fieldset class="form-field">
-          <legend>Select Tip %</legend>
+          <legend class="form-label">Select Tip %</legend>
           <div>
             <label for="5">5%</label>
             <input type="radio" name="tip" value="5" id="5">
@@ -47,9 +49,11 @@
           </div>
         </fieldset>
         <div class="form-field">
-          <label for="people">Number of people</label>
-          <input type="number" id="people" name="people">
-          <img src="./src/assets/images/icon-person.svg" alt="">
+          <label for="people" class="form-label">Number of people</label>
+          <div class="form-thumb">
+            <input type="number" id="people" name="people" placeholder="0" class="form-input">
+            <img src="./src/assets/images/icon-person.svg" alt="" class="icon icon-person">
+          </div>
         </div>
       </form>
       <div class="results">

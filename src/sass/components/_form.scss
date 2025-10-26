@@ -2,3 +2,69 @@
 @use "../utils/variables" as var;
 @use "../utils/functions" as fn;
 @use "../utils/mixins" as mx;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: fn.get-sp('sp-400');
+
+    @include mx.mq('md') {
+        gap: fn.get-sp('sp-300');
+    }
+
+    @include mx.mq('lg') {
+        gap: fn.get-sp('sp-500');
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: fn.get-sp('sp-100');
+}
+
+.form-label {
+    @extend %preset-5;
+
+    color: fn.get-color('grey-500');
+}
+
+.form-thumb {
+    position: relative;
+    
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 1.06rem;
+        transform: translateY(-50%);
+
+        flex-shrink: 0;
+
+        &-dollar {
+            width: 10px;
+            height: 15.5px;
+        }
+
+        &-person {
+            width: 13px;
+            height: 16px;
+        }
+    }
+}
+
+.form-input {
+    @extend %preset-3;
+
+    width: 100%;
+    padding: 0.37rem 1.06rem;
+    border-radius: 5px;
+        
+    text-align: right;
+
+    color: fn.get-color('green-900');
+    background-color: fn.get-color('grey-50');
+
+    &::placeholder {
+        color: rgba(fn.get-color('green-900'), 0.35);
+    }
+}
