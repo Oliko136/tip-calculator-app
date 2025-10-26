@@ -11,9 +11,6 @@
     "preview": "vite preview",
     "watch": "npx vite build --watch"
   },
-  "browserslist": [
-    "cover 99.5%"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Oliko136/tip-calculator-app.git"
