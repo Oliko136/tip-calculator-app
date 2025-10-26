@@ -1,3 +1,36 @@
-.btn {}
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
 
-.btn-reset {}
+.btn {
+    border-radius: 5px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    transition-property: background-color color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: fn.get-color('green-200');
+    }
+}
+
+.btn-reset {
+    @extend %preset-4;
+
+    padding: 0.56rem 2.41rem;
+    width: 100%;
+
+    color: fn.get-color('green-900');
+    background-color: fn.get-color('green-400');
+
+    &[disabled] {
+        color: fn.get-color('green-800');
+        background-color: fn.get-color('green-750');
+    }
+}

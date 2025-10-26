@@ -130,6 +130,11 @@ meter {
   letter-spacing: -0.0625rem;
 }
 
+.btn-reset {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
 .results-name span {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -256,4 +261,27 @@ button {
 
 .results-amount {
   color: #26C2AE;
+}
+
+.btn {
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.btn:hover, .btn:focus, .btn:active {
+  background-color: #9FE8DF;
+}
+
+.btn-reset {
+  padding: 0.56rem 2.41rem;
+  width: 100%;
+  color: #00474B;
+  background-color: #26C2AE;
+}
+.btn-reset[disabled] {
+  color: #085C61;
+  background-color: #0D686D;
 }/*# sourceMappingURL=main.css.map */
