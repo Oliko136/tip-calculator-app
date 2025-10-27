@@ -3,6 +3,7 @@ import './sass/main.scss';
 const form = document.getElementById('form');
 const tipResult = document.getElementById('tip-result');
 const totalResult = document.getElementById('total-result');
+const resetBtn = document.getElementById('reset');
 
 function calculateTip() {
     const bill = parseFloat(form.bill.value) || 0;
@@ -18,9 +19,18 @@ function calculateTip() {
 }
 
 function renderResults(tipAmount, total) {
-    tipResult.textContent = tipAmount.toFixed(2);
-    totalResult.textContent = total.toFixed(2);
+    tipResult.textContent = `$${tipAmount.toFixed(2)}`;
+    totalResult.textContent = `$${total.toFixed(2)}`;
+}
+
+function reset() {
+    form.bill.value = 0;
+    form.people.value = 0;
+
+    tipResult.textContent = '$0.00';
+    totalResult.textContent = '$0.00';
 }
 
 // Event listeners
 form.addEventListener('change', calculateTip);
+resetBtn.addEventListener('click', reset);
