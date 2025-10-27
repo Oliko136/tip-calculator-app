@@ -23,9 +23,8 @@ function renderResults(tipAmount, total) {
     totalResult.textContent = `$${total.toFixed(2)}`;
 }
 
-function reset() {
-    form.bill.value = 0;
-    form.people.value = 0;
+function resetForm() {
+    form.reset();
 
     tipResult.textContent = '$0.00';
     totalResult.textContent = '$0.00';
@@ -33,4 +32,4 @@ function reset() {
 
 // Event listeners
 form.addEventListener('change', calculateTip);
-resetBtn.addEventListener('click', reset);
+resetBtn.addEventListener('click', resetForm);
