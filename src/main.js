@@ -7,8 +7,20 @@ const resetBtn = document.getElementById('reset');
 
 function calculateTip() {
     const bill = parseFloat(form.bill.value) || 0;
-    const tipPercent = parseFloat(form.tip.value) || 0;
     const people = parseFloat(form.people.value) || 1;
+
+    let tipPercent = 0;
+
+    const selectedRadio = form.querySelector('input[name="tip"]:checked');
+    const customTip = parseFloat(form.custom?.value);
+
+    clearTipUI();
+
+    if (selectedRadio) {
+        tipPercent = parseFloat(selectedRadio.value);
+    } else if (customTip > 0) {
+        tipPercent = customTip;
+    }
 
     if (people <= 0) return;
 
@@ -30,6 +42,19 @@ function resetForm() {
     totalResult.textContent = '$0.00';
 }
 
+function clearTipUI() {
+    const customTipInput = document.getElementById('custom');
+    const tipRadios = document.querySelectorAll('input[name="tip"]');
+
+    tipRadios.forEach(radio => {
+        radio.addEventListener('change', () => customTipInput.value = '');
+    });
+
+    customTipInput.addEventListener('input', () => {
+        tipRadios.forEach(radio => radio.checked = false);
+    });
+}
+
 // Event listeners
-form.addEventListener('change', calculateTip);
+form.addEventListener('input', calculateTip);
 resetBtn.addEventListener('click', resetForm);
