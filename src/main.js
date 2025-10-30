@@ -21,6 +21,8 @@ customTipInput.addEventListener('input', () => {
 });
 
 function calculateTip() {
+    enableReset();
+
     const bill = parseFloat(form.bill.value.trim()) || 0;
     const people = parseFloat(form.people.value.trim()) || 0;
 
@@ -54,6 +56,7 @@ function resetForm() {
     form.reset();
 
     clearUI();
+    disableReset();
 }
 
 function validateUI(e) {
@@ -103,7 +106,16 @@ function clearUI() {
     clearError();
 }
 
+function disableReset() {
+    resetBtn.disabled = true;
+}
+
+function enableReset() {
+    resetBtn.disabled = false;
+}
+
 // Event listeners
 form.addEventListener('input', calculateTip);
 form.querySelectorAll('input[type="number"]').forEach(input => input.addEventListener('blur', validateUI));
 resetBtn.addEventListener('click', resetForm);
+document.addEventListener('DOMContentLoaded', disableReset);
