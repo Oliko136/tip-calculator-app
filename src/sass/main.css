@@ -360,6 +360,7 @@ input[type=number] {
   transition-duration: 300ms;
   transition-timing-function: ease;
   display: block;
+  width: 100%;
   height: 48px;
   padding: 0.38rem 1.07rem;
   border-radius: 5px;

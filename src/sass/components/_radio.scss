@@ -21,6 +21,7 @@
     @include mx.ease(background-color, color, outline);
 
     display: block;
+    width: 100%;
     height: 48px;
     padding: 0.38rem 1.07rem;
     border-radius: 5px;
