@@ -95,6 +95,11 @@
         opacity: 0;
         visibility: hidden;
     }
+
+    @include mx.mq('md', 'max') {
+        font-size: fn.get-fs('xs');
+        line-height: 1.1875rem;
+    }
 }
 
 .success {
